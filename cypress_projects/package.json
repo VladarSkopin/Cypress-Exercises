@@ -7,14 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "open": "npx cypress open",
     "test:chrome": "cypress run --browser chrome",
-    "test:firefox": "cypress run --browser firefox"
+    "test:firefox": "cypress run --browser firefox",
+    "test:edge": "cypress run --browser edge"
   },
   "author": "Alex Skopin",
   "license": "ISC",
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.5",
     "cypress": "^13.13.2",
-    "mysql2": "^3.11.0",
-    "pg": "^8.12.0"
+    "mysql2": "^3.11.0"
   }
 }

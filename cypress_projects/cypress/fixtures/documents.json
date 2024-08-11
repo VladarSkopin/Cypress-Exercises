@@ -1,0 +1,52 @@
+{
+    "documents": [
+      {
+        "id": 123456,
+        "data": {
+          "created": "17-11-2022",
+          "status": "ARCHIVED",
+          "client": "Siberian Oils Inc",
+          "year": 2023,
+          "period": 3,
+          "currency": "RUR",
+          "amount": 999999
+        }
+      },
+      {
+        "id": 654123,
+        "data": {
+          "created": "27-07-2024",
+          "status": "EDITING",
+          "client": "Siberian Oils Inc",
+          "year": 2023,
+          "period": 3,
+          "currency": "RUR",
+          "amount": 999999
+        }
+      },
+      {
+        "id": 987345,
+        "data": {
+          "created": "02-09-2023",
+          "status": "CREATED",
+          "client": "Siberian Oils Inc",
+          "year": 2021,
+          "period": 3,
+          "currency": "RUR",
+          "amount": 999999
+        }
+      },
+      {
+        "id": 345321,
+        "data": {
+          "created": "01-01-2022",
+          "status": "EDITING",
+          "client": "Siberian Oils Inc",
+          "year": 2023,
+          "period": 1,
+          "currency": "RUR",
+          "amount": 999999
+        }
+      }
+    ]
+  }

@@ -1,0 +1,10 @@
+{
+    "urlProductsList": "https://automationexercise.com/api/productsList",
+    "urlBrandsList": "https://automationexercise.com/api/brandsList",
+    "searchProduct": "https://automationexercise.com/api/searchProduct",
+    "verifyLogin": "https://automationexercise.com/api/verifyLogin",
+    "createAccount": "https://automationexercise.com/api/createAccount",
+    "deleteAccount": "https://automationexercise.com/api/deleteAccount",
+    "updateAccount": "https://automationexercise.com/api/updateAccount",
+    "getUserDetailByEmail": "https://automationexercise.com/api/getUserDetailByEmail"
+}

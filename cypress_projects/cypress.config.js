@@ -14,7 +14,7 @@ const pool = mysql.createPool({
 module.exports = defineConfig({
   e2e: {
 
-    baseUrl: "https://practice.expandtesting.com/notes/api/api-docs/",
+    baseUrl: "https://automationexercise.com",
     //fileServerFolder: ".",
     //fixturesFolder: "./cypress/fixtures",
     //integrationFolder: "./cypress/integration",

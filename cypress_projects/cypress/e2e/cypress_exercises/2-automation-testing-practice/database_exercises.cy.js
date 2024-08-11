@@ -2,12 +2,14 @@
 
 describe("Database Tests", () => {
 
+  let client_suffix = Cypress._.random(100, 900)
+
   // Client data to be inserted into the DB
   const newClient = {
     client_general_id: 'AU-123',
     created: "STR_TO_DATE('21-12-2022', '%d-%m-%Y')",
     title_short: 'Ships AU',
-    title_long: 'Australian Shipbuilding and Transportation'
+    title_long: `Australian Shipbuilding and Transportation ${client_suffix}`
   };
 
   // Financial data to be inserted into the DB

@@ -1,0 +1,7 @@
+{
+    "urlProductsList": "https://automationexercise.com/api/productsList",
+    "urlBrandsList": "https://automationexercise.com/api/brandsList",
+    "healthCheck": "https://practice.expandtesting.com/notes/api/health-check",
+    "usersRegister": "https://practice.expandtesting.com/notes/api/users/register",
+    "usersLogin": "https://practice.expandtesting.com/notes/api/users/login"
+}

@@ -28,7 +28,7 @@ describe('API tests', () => {
         cy.request('GET', urlProductsList).then((response) => {
             cy.log(response.body)
             expect(response.status).to.be.oneOf([200, 201])
-            expect(response.statusText).to.be.eq('OK')
+            expect(response.statusText).to.eq('OK')
             const responseBodyString = JSON.parse(response.body);
             expect(responseBodyString.products.length).to.be.gte(0)
             expect(responseBodyString.responseCode).to.be.oneOf([200, 201])
@@ -44,7 +44,7 @@ describe('API tests', () => {
         cy.request('GET', urlBrandsList).then((response) => {
             cy.log(response.body)
             expect(response.status).to.be.oneOf([200, 201])
-            expect(response.statusText).to.be.eq('OK')
+            expect(response.statusText).to.eq('OK')
             const responseBodyString = JSON.parse(response.body);
             expect(responseBodyString.brands.length).to.be.gte(0)
             expect(responseBodyString.responseCode).to.be.oneOf([200, 201])
@@ -67,7 +67,7 @@ describe('API tests', () => {
         cy.request('GET', healthCheck).then((response) => {
             cy.log(response.body)
             expect(response.status).to.be.oneOf([200, 201])
-            expect(response.statusText).to.be.eq('OK')
+            expect(response.statusText).to.eq('OK')
             expect(response.body.success).to.be.true
             expect(response.body.message).to.eq('Notes API is Running')
         })
@@ -94,6 +94,7 @@ describe('API tests', () => {
             expect(response.statusText).to.be.oneOf(['Created', 'OK'])
             expect(response.body.success).to.be.true
             expect(response.body.message).to.eq('User account created successfully')
+            expect(Object.keys(response.body.data)).to.have.lengthOf(3)
             expect(response.body.data.id).to.exist
             expect(response.body.data.name).to.eq(formData.name)
             expect(response.body.data.email).to.eq(formData.email)
@@ -112,6 +113,7 @@ describe('API tests', () => {
             expect(response.statusText).to.be.oneOf(['Created', 'OK'])
             expect(response.body.success).to.be.true
             expect(response.body.message).to.eq('Login successful')
+            expect(Object.keys(response.body.data)).to.have.lengthOf(4)
             expect(response.body.data.id).to.exist
             expect(response.body.data.name).to.eq(formData.name)
             expect(response.body.data.email).to.eq(formData.email)
@@ -128,7 +130,7 @@ describe('API tests', () => {
             body: { email: formData.email + "_WRONG", password: formData.password }
         }).then((response) => {
             cy.log(response.body)
-            expect(response.status).to.be.eq(400)
+            expect(response.status).to.eq(400)
             expect(response.body.success).to.be.false
             expect(response.body.message).to.eq('A valid email address is required')
             expect(Object.keys(response.body)).not.to.include('data')  // to be sure that User data was NOT received
@@ -145,7 +147,7 @@ describe('API tests', () => {
             body: { email: formData.email, password: formData.password + "_WRONG" }
         }).then((response) => {
             cy.log(response.body)
-            expect(response.status).to.be.eq(401)
+            expect(response.status).to.eq(401)
             expect(response.body.success).to.be.false
             expect(response.body.message).to.eq('Incorrect email address or password')
             expect(Object.keys(response.body)).not.to.include('data')  // to be sure that User data was NOT received

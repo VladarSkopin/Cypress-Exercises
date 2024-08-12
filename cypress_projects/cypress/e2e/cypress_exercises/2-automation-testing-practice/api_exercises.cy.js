@@ -94,6 +94,7 @@ describe('API tests', () => {
             expect(response.statusText).to.be.oneOf(['Created', 'OK'])
             expect(response.body.success).to.be.true
             expect(response.body.message).to.eq('User account created successfully')
+            expect(Object.keys(response.body.data)).to.have.lengthOf(3)
             expect(response.body.data.id).to.exist
             expect(response.body.data.name).to.eq(formData.name)
             expect(response.body.data.email).to.eq(formData.email)
@@ -112,6 +113,7 @@ describe('API tests', () => {
             expect(response.statusText).to.be.oneOf(['Created', 'OK'])
             expect(response.body.success).to.be.true
             expect(response.body.message).to.eq('Login successful')
+            expect(Object.keys(response.body.data)).to.have.lengthOf(4)
             expect(response.body.data.id).to.exist
             expect(response.body.data.name).to.eq(formData.name)
             expect(response.body.data.email).to.eq(formData.email)
